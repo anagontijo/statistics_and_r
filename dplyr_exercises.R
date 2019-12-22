@@ -1,0 +1,12 @@
+library(downloader)
+url="https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv"
+filename <- basename(url)
+download(url,filename)
+data <- read.csv(filename)
+paste("Exercise #1: ", class(data))
+primates <- filter(data, order=="Primates")
+paste("Exercise #2: ", nrow(primates))
+paste("Exercise #3: ", class(primates))
+paste("Exercise #4: ", select(primates, sleep_total) %>% class)
+paste("Exercise #5: ", select(primates, sleep_total) %>% unlist %>% mean)
+paste("Exercise #6: ", summarize(primates, mean=mean(sleep_total))$mean[1])

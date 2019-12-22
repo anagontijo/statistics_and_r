@@ -1,0 +1,10 @@
+library(downloader) 
+url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/femaleControlsPopulation.csv"
+filename <- basename(url)
+download(url, destfile=filename)
+x <- unlist( read.csv(filename) )
+paste("Exercises #1: ", mean(x))
+set.seed(1, sample.kind="Rounding")
+paste("Exercises #2: ", abs(mean(sample(x,5))-mean(x)))
+set.seed(5, sample.kind="Rounding")
+paste("Exercises #3: ", abs(mean(sample(x,5))-mean(x)))
