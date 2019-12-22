@@ -1,8 +1,7 @@
 # Statistics and R
-## HarvardX Course Summary
+## HarvardX Course Based R Utils Summary
 
-### Getting started with R
-Just a section about downloading and running RStudio.
+### Default Functions
 
 #### Creating a vector [1,2,3,4,5] :
 <pre><code>
@@ -57,3 +56,7 @@ It's possible to access elements of objects using _[]_, when it's used with inte
 which(cars$dist == 85)
 </code></pre>
 The operator _$_ chooses a column of the data frame by its name. The function _which_ recieves a logic expression as an enter, returning the indexes where this expression is true.
+
+### Dplyr Package Functions
+
+### Qqplot Package Functions
