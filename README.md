@@ -19,6 +19,11 @@ version4 <- seq(1,5,lenght.out=5)
 * __version3__: Uses the _seq_ function, defining the initial and final elements and the increments between them (by).
 * __version4__: Uses the _seq_ function, defining the initial and final elements and the number of elements in the resulting vector.
 
+Getting the mean of a vector:
+<pre><code>
+mean(vector)
+</code></pre>
+
 
 #### Exercise #3
 Looping in elements of a vector printing them:
@@ -38,7 +43,7 @@ class(cars)
 When you are using the datasets package, some datasets are available for use like they were variables (see https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html). One of those is _cars_. By using the function _class_ in any object it will return the class of that object.
 
 #### Exercise #5
-Function length, nrow:
+Function length and nrow:
 <pre><code>
 length(cars)
 nrow(cars)
