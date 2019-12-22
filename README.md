@@ -30,12 +30,12 @@ for (element in vector) {
 The for loop simply iterates through a list/vector/dataframe or any other structure with elements.
 
 #### Exercise #4
-Using datasets, downloading them and analysing classes:
+Using datasets from its package and analysing classes:
 <pre><code>
 cars
 class(cars)
 </code></pre>
-When you are using the datasets package, some datasets are available for use like they were variables. One of those is _cars_. By using the function _class_ in any object it will return the class of that object.
+When you are using the datasets package, some datasets are available for use like they were variables (see https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html). One of those is _cars_. By using the function _class_ in any object it will return the class of that object.
 
 #### Exercise #5
 Function length, nrow:
