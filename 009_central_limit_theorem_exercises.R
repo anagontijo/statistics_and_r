@@ -1,0 +1,16 @@
+library(downloader) 
+url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/mice_pheno.csv"
+filename <- basename(url)
+download(url, destfile=filename)
+dat <- na.omit( read.csv(filename) )
+y <- filter(dat, Sex=="M") %>% filter(Diet=="chow") %>% select(Bodyweight) %>% unlist
+paste("Exercise #4: ", length(y[abs(y - mean(y)) <= popsd(y)])/length(y))
+paste("Exercise #5: ", length(y[abs(y - mean(y)) <= 2*popsd(y)])/length(y))
+paste("Exercise #6: ", length(y[abs(y - mean(y)) <= 3*popsd(y)])/length(y))
+avgs <- replicate(10000, mean( sample(y, 25)))
+mypar(1,2)
+hist(avgs)
+qqnorm(avgs)
+qqline(avgs)
+paste("Exercise #9: ", mean(avgs))
+paste("Exercise #10: ", popsd(avgs))
